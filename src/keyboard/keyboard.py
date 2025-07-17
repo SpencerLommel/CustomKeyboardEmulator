@@ -18,10 +18,3 @@ class Keyboard:
 
     def __str__(self):
         return f'{self.name} | {self.test}'
-
-    class Key:
-        def __init__(self, key_string):
-            keys = self.parse_key_string(key_string)
-
-        def parse_key_string(self, key_string):
-            return key_string.split("\n")

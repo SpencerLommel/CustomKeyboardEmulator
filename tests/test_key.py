@@ -1,7 +1,25 @@
 from src.keyboard import Key
 
-def test_key_initialization() -> None:
-    my_key = Key("A", width=1, height=2.5)
-    assert my_key.key_value == "A"
-    assert my_key.width == 1
-    assert my_key.height == 2.5
+def test_key_default_initialization() -> None:
+    test_key = Key("A")
+    assert test_key.width == 1.0
+    assert test_key.height == 1.0
+
+
+def test_key_initialization_with_size_args() -> None:
+    test_key = Key("A", width=1, height=2.5)
+    assert test_key.key_value == "A"
+    assert test_key.width == 1
+    assert test_key.height == 2.5
+
+
+def test_key_modifiers() -> None:
+    test_key = Key("B", width=2.2, height=3)
+    assert test_key.width == 2.2
+    assert test_key.height == 3
+
+    test_key.setWidth(4)
+    assert test_key.width == 4
+
+    test_key.setHeight(1.0)
+    assert test_key.height == 1

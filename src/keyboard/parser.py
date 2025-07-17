@@ -1,4 +1,4 @@
-from key import Key
+from key import Spacer
 from keyboard import Keyboard
 from src.keyboard.spacer import Spacer
 

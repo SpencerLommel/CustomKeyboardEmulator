@@ -18,3 +18,12 @@ print(k)
 k.setHeight(10)
 k.setWidth(2.5)
 print(k)
+
+keyboard = [
+    [Key("7"), Key("8"), Key("9")],
+    [Key("4"), Key("5"), Key("6")],
+    [Key("1"), Key("2"), Key("3")],
+    [Key("0", width=2), Key(".")]
+]
+
+print(keyboard[0][0])
