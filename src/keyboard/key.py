@@ -20,3 +20,6 @@ class Key:
 
     def __str__(self):
         return f'Key [{self.key_value}] w:{self.width},h:{self.height}'
+
+    def __eq__(self, other):
+        return self.key_value == other.key_value and self.width == other.width and self.height == other.height and isinstance(other, Key)
