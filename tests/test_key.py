@@ -1,3 +1,8 @@
+# Spencer Lommel
+# July 17th, 2025
+# CustomKeyboardEmulator test_key.py
+
+
 from src.keyboard import Key
 
 def test_key_default_initialization() -> None:
@@ -18,8 +23,8 @@ def test_key_modifiers() -> None:
     assert test_key.width == 2.2
     assert test_key.height == 3
 
-    test_key.setWidth(4)
+    test_key.set_width(4)
     assert test_key.width == 4
 
-    test_key.setHeight(1.0)
+    test_key.set_height(1.0)
     assert test_key.height == 1

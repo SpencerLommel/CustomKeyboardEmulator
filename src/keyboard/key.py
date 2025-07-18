@@ -1,3 +1,7 @@
+# Spencer Lommel
+# July 17th, 2025
+# CustomKeyboardEmulator key.py
+
 class Key:
     def __init__(self, key_value, width=1, height=1):
         # Eventually add some logic for primary key and secondary key
@@ -8,10 +12,10 @@ class Key:
         self.width = width
         self.height = height
 
-    def setWidth(self, width):
+    def set_width(self, width):
         self.width = width
 
-    def setHeight(self, height):
+    def set_height(self, height):
         self.height = height
 
     def __str__(self):

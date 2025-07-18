@@ -1,13 +1,26 @@
-from key import Spacer
+# Spencer Lommel
+# July 17th, 2025
+# CustomKeyboardEmulator parser.py
+from typing import Any
+
+# w & h affect the proceeding key.
+# ex. [{w:2},"Backspace"] makes the Backspace key 2 wide
+# w specifies key width
+# h specifies key height
+# x specifies horizontal spacing
+# y specifies vertical spacing
+
 from keyboard import Keyboard
-from src.keyboard.spacer import Spacer
+from key import Key
+from spacer import Spacer
 
 char_map = {
     '{': '}',
     '[': ']'
 }
 
-def keyparse(key_string) -> Keyboard:
+# https://www.keyboard-layout-editor.com/
+def parse_kle_data(key_string):
     char_stack = []
     key_stack = []
 

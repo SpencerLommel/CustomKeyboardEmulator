@@ -1,20 +1,22 @@
-# w & h affect the proceeding key.
-# ex. [{w:2},"Backspace"] makes the Backspace key 2 wide
-# w specifies key width
-# h specifies key height
-# x specifies horizontal spacing
-# y specifies vertical spacing
-class Keyboard:
-    def __init__(self, kb_string):
-        self.data = kb_string
-        self.length = 4
+# Spencer Lommel
+# July 17th, 2025
+# CustomKeyboardEmulator keyboard.py
 
-    @classmethod
-    def from_file(cls, filename):
-        with open(filename, 'r') as kb_file:
-            # initialize keyboard data here
-            cls.length = 5
-            return cls("test")
+from typing import Union
+from .key import Key
+from .spacer import Spacer
+
+class Keyboard:
+    def __init__(self):
+        # contains an array of arrays, the outer one represents each column, and the inner ones represent each row
+        self.rows: list[list[Union[Key, Spacer]]] = [[]]
+
+    def add_row(self, row: list[Union[Key, Spacer]]):
+        self.rows.append(row)
+
+    def get_key(self, row: int, col: int) -> Union[Key, Spacer]:
+        return self.rows[row][col]
+
 
     def __str__(self):
-        return f'{self.name} | {self.test}'
+        return f'Keyboard: Not implemented yet so here is a silly face >:---)'

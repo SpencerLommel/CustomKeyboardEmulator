@@ -1,12 +1,16 @@
+# Spencer Lommel
+# July 17th, 2025
+# CustomKeyboardEmulator spacer.py
+
 class Spacer:
     def __init__(self, width: float = 0, height: float = 0):
         self.width: float = width
         self.height: float = height
 
-    def setWidth(self, width):
+    def set_width(self, width):
         self.width = width
 
-    def setHeight(self, height):
+    def set_height(self, height):
         self.height = height
 
     def __str__(self):

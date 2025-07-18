@@ -15,8 +15,8 @@ print(s)
 # Test key
 k = Key("A", width=1, height=2)
 print(k)
-k.setHeight(10)
-k.setWidth(2.5)
+k.set_height(10)
+k.set_width(2.5)
 print(k)
 
 keyboard = [
