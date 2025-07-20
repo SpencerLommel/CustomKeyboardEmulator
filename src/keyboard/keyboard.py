@@ -53,4 +53,4 @@ class Keyboard:
 
     def __eq__(self, other):
         # Because we are checking the row data, we shouldn't need to check height/width/size
-        self.rows == other.rows and isinstance(other, Keyboard)
+        return isinstance(other, Keyboard) and self.rows == other.rows

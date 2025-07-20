@@ -2,7 +2,8 @@
 # July 18th, 2025
 # CustomKeyboardEmulator test_keyboard.py
 
-from src.keyboard import Key, Keyboard, Spacer
+from src.keyboard import Key, Keyboard
+
 
 def test_keyboard_default_initialization() -> None:
     test_keyboard = Keyboard()
@@ -10,6 +11,7 @@ def test_keyboard_default_initialization() -> None:
     assert test_keyboard.width == 0
     assert test_keyboard.height == 0
     assert test_keyboard.rows == []
+
 
 def test_keyboard_initialize_with_numpad() -> None:
     keyboard_layout = [
@@ -27,4 +29,3 @@ def test_keyboard_initialize_with_numpad() -> None:
 
     assert test_keyboard.height == 4
     assert test_keyboard.width == 3
-

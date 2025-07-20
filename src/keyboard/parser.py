@@ -1,7 +1,6 @@
 # Spencer Lommel
 # July 17th, 2025
 # CustomKeyboardEmulator parser.py
-from typing import Any
 
 # w & h affect the proceeding key.
 # ex. [{w:2},"Backspace"] makes the Backspace key 2 wide
@@ -10,14 +9,13 @@ from typing import Any
 # x specifies horizontal spacing
 # y specifies vertical spacing
 
-from keyboard import Keyboard
-from key import Key
 from spacer import Spacer
 
 char_map = {
     '{': '}',
     '[': ']'
 }
+
 
 # https://www.keyboard-layout-editor.com/
 def parse_kle_data(key_string):
@@ -52,7 +50,6 @@ def parse_kle_data(key_string):
                 readUntil = None
             else:
                 keyValue += key_string[i]
-
 
         # If our char_stack is empty and the next char is a comma, that must mean we've started the next column
         if len(char_stack) == 0 and i > 1:

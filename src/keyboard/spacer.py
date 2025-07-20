@@ -17,4 +17,4 @@ class Spacer:
         return f'Spacer w:{self.width},h:{self.height}'
 
     def __eq__(self, other):
-        self.width == other.width and self.height == other.height and isinstance(other, Spacer)
+        return isinstance(other, Spacer) and self.width == other.width and self.height == other.height

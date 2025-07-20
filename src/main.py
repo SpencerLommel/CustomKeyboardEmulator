@@ -1,5 +1,4 @@
-from keyboard import Keyboard, Key, Spacer
-from src.keyboard.keyboard import calculate_size
+from keyboard import Keyboard, Key
 
 # Test keyparse
 # This sohuld denote a keyboard with 3 keys (3 columns 1 row)
@@ -28,7 +27,6 @@ keyboard_layout = [
 ]
 
 my_keyboard = Keyboard(keyboard_layout)
-
 
 first_key = my_keyboard.get_key(3, 0)
 test = Key("0", width=2)
